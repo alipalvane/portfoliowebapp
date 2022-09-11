@@ -1,0 +1,8 @@
+.text-footer{
+    text-align: center;
+    color: var(--color-light);
+    margin: 5rem auto 2rem;
+}
+.footer__icon{
+    color: var(--color-primary);
+}
