@@ -1,6 +1,6 @@
 import React from "react";
 import "./services.css";
-import { TbCheck } from "react-icons/tb";
+import { serviceData } from "../../constants";
 
 const Services = () => {
   return (
@@ -8,77 +8,25 @@ const Services = () => {
       <h5>What I Offer</h5>
       <h2>Services</h2>
       <div className="container services__container">
-        <article className="service">
-          <div className="service__head">
-            <h3>UI/UX Design</h3>
-          </div>
-          <ul className="service__list">
-            <li>
-              <TbCheck className="service__list-icon" />
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </li>
-            <li>
-              <TbCheck className="service__list-icon" />
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </li>
-            <li>
-              <TbCheck className="service__list-icon" />
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </li>
-            <li>
-              <TbCheck className="service__list-icon" />
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </li>
-          </ul>
-        </article>
-
-        <article className="service">
-          <div className="service__head">
-            <h3>Front End</h3>
-          </div>
-          <ul className="service__list">
-            <li>
-              <TbCheck className="service__list-icon" />
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </li>
-            <li>
-              <TbCheck className="service__list-icon" />
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </li>
-            <li>
-              <TbCheck className="service__list-icon" />
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </li>
-            <li>
-              <TbCheck className="service__list-icon" />
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </li>
-          </ul>
-        </article>
-
-        <article className="service">
-          <div className="service__head">
-            <h3>Back End</h3>
-          </div>
-          <ul className="service__list">
-            <li>
-              <TbCheck className="service__list-icon" />
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </li>
-            <li>
-              <TbCheck className="service__list-icon" />
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </li>
-            <li>
-              <TbCheck className="service__list-icon" />
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </li>
-            <li>
-              <TbCheck className="service__list-icon" />
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </li>
-          </ul>
-        </article>
+        {serviceData.map(({ title, serviceList }, index) => {
+          return (
+            <article key={index} className="service">
+              <div className="service__head">
+                <h3>{title}</h3>
+              </div>
+              <ul className="service__list">
+                {serviceList.map(({ icon, text, index }) => {
+                  return (
+                    <li key={index}>
+                      {icon}
+                      <p>{text}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </article>
+          );
+        })}
       </div>
     </section>
   );

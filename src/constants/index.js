@@ -1,5 +1,7 @@
 import { BsPatchCheckFill } from "react-icons/bs";
 import { TbAward, TbUsers, TbDeviceLaptop } from "react-icons/tb";
+import { TbCheck } from "react-icons/tb";
+
 export const frontExprience = [
   {
     title: "HTML",
@@ -76,5 +78,73 @@ export const aboutData = [
     icon: <TbDeviceLaptop className="about__icon" />,
     title: "Projects",
     detail: "80+ Completed",
+  },
+];
+
+export const serviceData = [
+  {
+    title: "UI/UX Design",
+    serviceList: [
+      {
+        icon: <TbCheck className="service__list-icon" />,
+        text: "Lorem Ipsum is simply dummy text of the printing",
+      },
+      {
+        icon: <TbCheck className="service__list-icon" />,
+        text: "Lorem Ipsum is simply dummy text of the printing",
+      },
+      {
+        icon: <TbCheck className="service__list-icon" />,
+        text: "Lorem Ipsum is simply dummy text of the printing",
+      },
+      {
+        icon: <TbCheck className="service__list-icon" />,
+        text: "Lorem Ipsum is simply dummy text of the printing",
+      },
+    ],
+  },
+
+  {
+    title: "front end developer",
+    serviceList: [
+      {
+        icon: <TbCheck className="service__list-icon" />,
+        text: "Lorem Ipsum is simply dummy text of the printing",
+      },
+      {
+        icon: <TbCheck className="service__list-icon" />,
+        text: "Lorem Ipsum is simply dummy text of the printing",
+      },
+      {
+        icon: <TbCheck className="service__list-icon" />,
+        text: "Lorem Ipsum is simply dummy text of the printing",
+      },
+      {
+        icon: <TbCheck className="service__list-icon" />,
+        text: "Lorem Ipsum is simply dummy text of the printing",
+      },
+    ],
+  },
+
+  {
+    title: "back end developer",
+    serviceList: [
+      {
+        icon: <TbCheck className="service__list-icon" />,
+        text: "Lorem Ipsum is simply dummy text of the printing",
+      },
+      {
+        icon: <TbCheck className="service__list-icon" />,
+        text: "Lorem Ipsum is simply dummy text of the printing",
+      },
+      {
+        icon: <TbCheck className="service__list-icon" />,
+        text: "Lorem Ipsum is simply dummy text of the printing",
+      },
+      {
+        icon: <TbCheck className="service__list-icon" />,
+        text: "Lorem Ipsum is simply dummy text of the printing",
+      },
+    ],
   },
 ];
