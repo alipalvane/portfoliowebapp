@@ -1,6 +1,10 @@
 import { BsPatchCheckFill } from "react-icons/bs";
 import { TbAward, TbUsers, TbDeviceLaptop } from "react-icons/tb";
 import { TbCheck } from "react-icons/tb";
+import avatar1 from "../assets/avatar1.jpg";
+import avatar2 from "../assets/avatar2.jpg";
+import avatar3 from "../assets/avatar3.jpg";
+import avatar4 from "../assets/avatar4.jpg";
 
 export const frontExprience = [
   {
@@ -148,3 +152,26 @@ export const serviceData = [
     ],
   },
 ];
+
+export const testmonialsData = [
+    {
+        img: avatar1,
+        name:'sofia terner',
+        comment:"In publishing and graphic design, Lorem ipsum is a placeholder text In publishing and graphic design"
+    },
+    {
+        img: avatar2,
+        name:'john farm',
+        comment:"In publishing and graphic design, Lorem ipsum is a placeholder text In publishing and graphic design"
+    },
+    {
+        img: avatar3,
+        name:'stive mack',
+        comment:"In publishing and graphic design, Lorem ipsum is a placeholder text In publishing and graphic design"
+    },
+    {
+        img: avatar4,
+        name:'mina hadid',
+        comment:"In publishing and graphic design, Lorem ipsum is a placeholder text In publishing and graphic design"
+    },
+]
