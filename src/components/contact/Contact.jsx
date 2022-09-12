@@ -34,9 +34,9 @@ const Contact = () => {
 
           <article className="contact__option">
             <RiFacebookCircleLine className="contact__option-icon" />
-            <h4>linkedin</h4>
+            <h4>facebook</h4>
             <h5>sarastone</h5>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <a href="https://facebook.com" target="_blank" rel="noreferrer">
               send message
             </a>
           </article>
