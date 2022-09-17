@@ -1,9 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { contactData } from "../../constants";
 import "./contact.css";
-import { MdOutlineAlternateEmail } from "react-icons/md";
-import { AiOutlineWhatsApp } from "react-icons/ai";
-import { RiFacebookCircleLine } from "react-icons/ri";
 
 const Contact = () => {
   const form = useRef();
@@ -23,32 +21,18 @@ const Contact = () => {
       <h2>contact me</h2>
       <div className="container contact__container">
         <div className="contact__options">
-          <article className="contact__option">
-            <MdOutlineAlternateEmail className="contact__option-icon" />
-            <h4>email</h4>
-            <h5>hi@sarastone.com</h5>
-            <a href="mailto:hi@sarastone.com" target="_blank" rel="noreferrer">
-              send message
-            </a>
-          </article>
-
-          <article className="contact__option">
-            <RiFacebookCircleLine className="contact__option-icon" />
-            <h4>facebook</h4>
-            <h5>sarastone</h5>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
-              send message
-            </a>
-          </article>
-
-          <article className="contact__option">
-            <AiOutlineWhatsApp className="contact__option-icon" />
-            <h4>whatsapp</h4>
-            <h5>+989123456789</h5>
-            <a href="https://wa.me" target="_blank" rel="noreferrer">
-              send message
-            </a>
-          </article>
+          {contactData.map(
+            ({ icon, titleSocial, addSocial, linkSocial }, id) => (
+              <article className="contact__option">
+                {icon}
+                <h4>{titleSocial}</h4>
+                <h5>{addSocial}</h5>
+                <a href={linkSocial} target="_blank" rel="noreferrer">
+                  send message
+                </a>
+              </article>
+            )
+          )}
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
